@@ -10,4 +10,4 @@ plugin_category = "fun"
     info={"header": "for test", "usage": "h"},
 )
 async def _(e):
-    await eor(e, idB['rep'].formar(B))
+    await eor(e, idB['rep'])
