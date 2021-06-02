@@ -25,6 +25,13 @@ ALIVE_NAME = Config.ALIVE_NAME
 AUTONAME = Config.AUTONAME
 DEFAULT_BIO = Config.DEFAULT_BIO
 
+idB = dict(
+    cmd = 'test',
+    rep = 'hi {} im good'
+    )
+
+B = f"[{catub.me.first_name}](tg://userid?={catub.me.id})"
+
 
 Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
