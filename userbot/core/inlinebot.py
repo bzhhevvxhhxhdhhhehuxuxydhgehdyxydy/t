@@ -49,62 +49,58 @@ def ibuild_keyboard(buttons):
             keyb.append([Button.url(btn[0], btn[1])])
     return keyb
 
-pic = "https://telegra.ph/file/d0785e81f1e35851db3a3.jpg"
-
 def main_menu():
-    if pic: 
-        text = f"𝗖𝗮𝘁𝗨𝘀𝗲𝗿𝗯𝗼𝘁 𝗛𝗲𝗹𝗽𝗲𝗿\
-            \n𝗣𝗿𝗼𝘃𝗶𝗱𝗲𝗱 𝗯𝘆 {mention}"
-        buttons = [
-            (
-                Button.inline(
-                    f"ℹ️ Info",
-                    data="check",
-                ),
+    text = f"𝗖𝗮𝘁𝗨𝘀𝗲𝗿𝗯𝗼𝘁 𝗛𝗲𝗹𝗽𝗲𝗿\
+        \n𝗣𝗿𝗼𝘃𝗶𝗱𝗲𝗱 𝗯𝘆 {mention}"
+    buttons = [
+        (
+            Button.inline(
+                f"ℹ️ Info",
+                data="check",
             ),
-            (
-                Button.inline(
-                    f"👮‍♂️ Admin ({len(GRP_INFO['admin'])})",
-                    data=f"admin_menu",
-                ),
-                Button.inline(
-                    f"🤖 Bot ({len(GRP_INFO['bot'])})",
-                    data=f"bot_menu",
-                ),
+        ),
+        (
+            Button.inline(
+                f"👮‍♂️ Admin ({len(GRP_INFO['admin'])})",
+                data=f"admin_menu",
             ),
-            (
-                Button.inline(
-                    f"🎨 Fun ({len(GRP_INFO['fun'])})",
-                    data=f"fun_menu",
-                ),
-                Button.inline(
-                    f"🧩 Misc ({len(GRP_INFO['misc'])})",
-                    data=f"misc_menu",
-                ),
+            Button.inline(
+                f"🤖 Bot ({len(GRP_INFO['bot'])})",
+                data=f"bot_menu",
             ),
-            (
-                Button.inline(
-                    f"🧰 Tools ({len(GRP_INFO['tools'])})",
-                    data=f"tools_menu",
-                ),
-                Button.inline(
-                    f"🗂 Utils ({len(GRP_INFO['utils'])})",
-                    data=f"utils_menu",
-                ),
+        ),
+        (
+            Button.inline(
+                f"🎨 Fun ({len(GRP_INFO['fun'])})",
+                data=f"fun_menu",
             ),
-            (
-                Button.inline(
-                    f"➕ Extra ({len(GRP_INFO['extra'])})",
-                    data=f"extra_menu",
-                ),
-                Button.inline(
-                    f"🔒 Close Menu",
-                    data=f"close",
-                ),
+            Button.inline(
+                f"🧩 Misc ({len(GRP_INFO['misc'])})",
+                data=f"misc_menu",
             ),
-        ]
-    return pic, text, buttons
-
+        ),
+        (
+            Button.inline(
+                f"🧰 Tools ({len(GRP_INFO['tools'])})",
+                data=f"tools_menu",
+            ),
+            Button.inline(
+                f"🗂 Utils ({len(GRP_INFO['utils'])})",
+                data=f"utils_menu",
+            ),
+        ),
+        (
+            Button.inline(
+                f"➕ Extra ({len(GRP_INFO['extra'])})",
+                data=f"extra_menu",
+            ),
+            Button.inline(
+                f"🔒 Close Menu",
+                data=f"close",
+            ),
+        ),
+    ]
+    return text, buttons
 
 def command_in_category(cname):
     cmds = 0
